@@ -3,32 +3,41 @@
 <head>
 	<title>Income Predictions (Urange AI)</title>
 	<style>
-		body {
-			background-color: #F0FDD6;
-		}
 		.container {
 		display: flex;
     justify-content: center;
     align-content: center;
 		}
+		.dropdown {
+			width: 200px;
+		}
+		.test {
+			width: 204px;
+			height: 37px;
+		}
 		tr {
 			height: 30px;
 		}
 		td {
-			width: 200px;
-			border: 1px solid black;
+			width: 150px;
+			text-align: right;
+			padding-right: 16px;
 		}
 		select {
 		  border: 1px solid #111;
+		  border-radius: 10px;
 		  background: transparent;
-		  width: 200px;
-		  border: 1px solid #ccc;
-		}
-		option {
-			width: 200px;
+		  width: inherit;
+		  max-width: 250px;
 		}
 		input {
+			height: 30px;
 			width: 200px;
+			border-style: solid;
+			border-color: gray;
+			border-radius: 10px;
+			border-width: 1px;
+			background-color: white;
 		}
 		.input-form {
 			width: 200px;
@@ -39,6 +48,15 @@
 		  width: 150px;
 		  padding: 5px 35px 5px 5px;
 		  border: 1px solid #ccc;
+		}
+		tr.submit {
+			height: 70px;
+		}
+		.submit-button {
+			width: 350px;
+		}
+		.submit-button:hover {
+			background-color: #E5E5E5;
 		}
 	</style>
 </head>
@@ -58,7 +76,8 @@
 				</tr>
 				<tr>
 					<td><label for="workclass">Workclass:</label></td>
-					<td class="input-form"><select name="workclass">
+					<div class="dropdown">
+					<td class="input-form"><select name="workclass" class="test">
 						<option value="Private">Private</option>
 						<option value="Self-emp-not-inc">Self Employed No Income</option>
 						<option value="Self-emp-inc">Self Employed With Income</option>
@@ -69,6 +88,7 @@
 						<option value="Not-worked">Not Worked</option>
 						<option value="Never-worked">Never Worked</option>
 					</select></td>
+					</div>
 				</tr>
 				<tr>
 					<td><label for="fnlwgt">Final Weight:</label></td>
@@ -76,7 +96,7 @@
 				</tr>
 				<tr>
 					<td><label for="education">Last Education:</label></td>
-					<td class="input-form"><select name="education">
+					<td class="input-form"><select name="education" class="test">
 						<option value="Bachelors">Bachelors</option>
 						<option value="Some-college">Some-college</option>
 						<option value="HS-grad">High School Graduate</option>
@@ -96,12 +116,12 @@
 					</select></td>
 				</tr>
 				<tr>
-					<td><label for="education-num">Education number</label></td>
+					<td><label for="education-num">Education number:</label></td>
 					<td class="input-form"><input type="number" name="education-num"/></td>
 				</tr>
 				<tr>
 					<td><label for="marital-status">Marital Status:</label></td>
-					<td class="input-form"><select name="marital-status">
+					<td class="input-form"><select name="marital-status" class="test">
 						<option value="Married-civ-spouse">Married, Civilian Spouse</option>
 						<option value="Married-af-spouse">Married, Armed Force Spouse</option>
 						<option value="Married-spouse-absent">Married, Spouse Absent</option>
@@ -113,7 +133,7 @@
 				</tr>
 				<tr>
 					<td><label for="occupation">Occupation:</label></td>
-					<td class="input-form"><select name="occupation">
+					<td class="input-form"><select name="occupation" class="test">
 						<option value="" ="Tech-support">Technical Support</option>
 						<option value="Craft-repair">Craft Repair</option>
 						<option value="Other-service">Other Service</option>
@@ -133,7 +153,7 @@
 				</tr>
 				<tr>
 					<td><label for="relationship">Relationship:</label></td>
-					<td class="input-form"><select name="relationship">
+					<td class="input-form"><select name="relationship" class="test">
 						<option value="Wife">Wife</option>
 						<option value="Husband">Husband</option>
 						<option value="Own-child">Own Child</option>
@@ -144,7 +164,7 @@
 				</tr>
 				<tr>	
 					<td><label for="race">Race:</label></td>
-					<td class="input-form"><select name="race">
+					<td class="input-form"><select name="race" class="test">
 						<option value="White">White</option>
 						<option value="Black">Black</option>
 						<option value="Asian-Pac-Islander">Asian or Pacific Islander</option>
@@ -154,7 +174,7 @@
 				</tr>
 				<tr>
 					<td><label for="sex">Sex:</label></td>
-					<td class="input-form"><select name="sex">
+					<td class="input-form"><select name="sex" class="test">
 						<option value="Female">Female</option>
 						<option value="Male">Male</option>
 					</select></td>
@@ -173,7 +193,7 @@
 				</tr>
 				<tr>
 					<td><label for="native-country">Native Country:</label></td>
-					<td class="input-form"><select name="native-country">
+					<td class="input-form"><select name="native-country" class="test">
 						<option value="United-States">United States</option>
 						<option value="Cambodia">Cambodia</option>
 						<option value="England">England</option>
@@ -218,8 +238,10 @@
 						<option value="Other-Country">Other Country</option>
 					</select></td>
 				</tr>
+				<tr class="submit">
+					<td colspan="2" style="text-align: center;"><input type="submit" class="submit-button"/></td>
+				</tr>
 			</table>
-			<input type="submit"/>
 		</form>
 	</div>
 </div>
