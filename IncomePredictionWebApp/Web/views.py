@@ -48,9 +48,14 @@ def process(req):
 	inp[59 + race] = 1
 	inp[64 + sex] = 1
 	inp[66 + native] = 1
-	model = joblib.load('model.pkl')
-	pred = model.predict([inp])
+	pred = [0]
+	context = {}
 	if (pred[0] == 0):
-		return HttpResponse('<=50K')
+		context = {
+			'prediction' : '<=50K'
+		}
 	else :
-		return HttpResponse('>50K')
+		context = {
+			'prediction' : '>50K'
+		}
+	return render(req, 'Web/process.html', context)
