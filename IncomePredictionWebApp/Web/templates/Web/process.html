@@ -6,16 +6,40 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
+		body {
+			justify-content: center;
+	    align-content: center;
+		}
 		.container {
 	    	justify-content: center;
 	    	align-content: center;
+	    	text-align: center;
+	    	vertical-align: center;
 	    	width: 100%;
 		}
+		h2 {
+			margin-top: 70px;
+			margin-bottom: 0px;
+		}
 		h1 {
+			margin-top: 0px;
+			margin-bottom: 30px;
 			font-size: 50px;
 		}
 		strong {
 			font-size: 30px;
+		}
+		button {
+			color: black;
+			background-color: #E5E5E5;
+			border: 2px solid #gray;
+			width: 500px;
+			height: 50px;
+			border-radius: 10px;
+			font-size: 17px;
+		}
+		button:hover {
+			background-color: #EEEFEE;
 		}
 	</style>
 </head>
@@ -28,14 +52,13 @@
 	    </div>
 	  </div>
 	</nav>
-	<br />
 	<div class="inside-container">
-		<h1 class="income">Your income prediction is : </h1>
+		<h2>Your income prediction is: </h2>
 		{% if prediction %}
-			<h2><strong> {{ prediction }} </strong></h2>
+			<h1><strong> {{ prediction }} </strong></h1>
 		{% endif %}
 	</div>
-	<a href="/">Predict again</a>
+	<button><a href="/">Predict again</a></button>
 </div>
 </body>
 </html>
