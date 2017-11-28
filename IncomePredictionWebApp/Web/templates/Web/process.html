@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Income Predictions (Urange AI)</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		.container {
+	    	justify-content: center;
+	    	align-content: center;
+	    	width: 100%;
+		}
+		h1 {
+			font-size: 50px;
+		}
+		strong {
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <h1 class="navbar-brand"><strong>Urange AI Income Predictor</strong></h1>
+	    </div>
+	  </div>
+	</nav>
+	<br />
+	<div class="inside-container">
+		<h1 class="income">Your income prediction is : </h1>
+		{% if prediction %}
+			<h2><strong> {{ prediction }} </strong></h2>
+		{% endif %}
+	</div>
+	<a href="/">Predict again</a>
+</div>
+</body>
+</html>
