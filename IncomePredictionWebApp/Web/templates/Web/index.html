@@ -3,10 +3,23 @@
 <head>
 	<title>Income Predictions (Urange AI)</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
-		body {
+		.data-form {
+			height: 100%;
+			display: table;
+			margin: auto;
+		}
+		.real-form {
+			height: 100%;
+			display: table-cell;
+			vertical-align: middle;
 			background-color: #F0FDD6;
+		}
+		body {
+			vertical-align: middle;
+			background-color: #F0FDD6;	
 		}
 		.container {
 	    	justify-content: center;
@@ -18,7 +31,6 @@
 		}
 		td {
 			width: 200px;
-			border: 1px solid black;
 		}
 		select {
 		  border: 1px solid #111;
@@ -36,7 +48,6 @@
 			width: 200px;
 		}
 		select {
-		  border: 1px solid #111;
 		  background: #E5E5E5;
 		  width: 150px;
 		  padding: 5px 35px 5px 5px;
@@ -58,7 +69,7 @@
 	</nav>
 	<br />
 	<div class="data-form">
-		<form method="POST" action="process">
+		<form method="POST" action="process" class="real-form">
 			{% csrf_token %}
 			<table>
 				<tr>
