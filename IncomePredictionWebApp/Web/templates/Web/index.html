@@ -2,11 +2,13 @@
 <html>
 <head>
 	<title>Income Predictions (Urange AI)</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
 		.container {
-		display: flex;
-    justify-content: center;
-    align-content: center;
+	    	justify-content: center;
+	    	align-content: center;
+	    	width: 100%;
 		}
 		.dropdown {
 			width: 200px;
@@ -27,8 +29,16 @@
 		  border: 1px solid #111;
 		  border-radius: 10px;
 		  background: transparent;
+<<<<<<< HEAD
 		  width: inherit;
 		  max-width: 250px;
+=======
+		  width: 100%;
+		  border: 1px solid #ccc;
+		}
+		option {
+			width: 200px;
+>>>>>>> b4196b301d1323710930827596c3d4461173f7f5
 		}
 		input {
 			height: 30px;
@@ -49,6 +59,7 @@
 		  padding: 5px 35px 5px 5px;
 		  border: 1px solid #ccc;
 		}
+<<<<<<< HEAD
 		tr.submit {
 			height: 70px;
 		}
@@ -57,14 +68,22 @@
 		}
 		.submit-button:hover {
 			background-color: #E5E5E5;
+=======
+		strong {
+			font-size: 30px;
+>>>>>>> b4196b301d1323710930827596c3d4461173f7f5
 		}
 	</style>
 </head>
 <body>
 <div class="container">
-	<div>
-		<h1>Income Predictions</h1>
-	</div>
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <h1 class="navbar-brand"><strong>Urange AI Income Predictor</strong></h1>
+	    </div>
+	  </div>
+	</nav>
 	<br />
 	<div class="data-form">
 		<form method="POST" action="process">
@@ -72,7 +91,7 @@
 			<table>
 				<tr>
 					<td><label for="age">Age:</label></td>
-					<td class="input-form"><input type="number" name="age" required/></td>
+					<td class="input-form"><input type="number" name="age" max="100" min="15" required/></td>
 				</tr>
 				<tr>
 					<td><label for="workclass">Workclass:</label></td>
@@ -92,7 +111,7 @@
 				</tr>
 				<tr>
 					<td><label for="fnlwgt">Final Weight:</label></td>
-					<td class="input-form"><input type="number" name="fnlwgt"/></td>
+					<td class="input-form"><input type="number" name="fnlwgt" required/></td>
 				</tr>
 				<tr>
 					<td><label for="education">Last Education:</label></td>
@@ -101,8 +120,8 @@
 						<option value="Some-college">Some-college</option>
 						<option value="HS-grad">High School Graduate</option>
 						<option value="Prof-school">Professor School</option>
-						<option value="Assoc-acdm">Associate ACDM</option>
-						<option value="Assoc-voc">Associate Voc</option>
+						<option value="Assoc-acdm">Associate Academy</option>
+						<option value="Assoc-voc">Associate Vocation</option>
 						<option value="Masters">Masters</option>
 						<option value="Doctorate">Doctorate</option>
 						<option value="12th">12th</option>
@@ -116,8 +135,13 @@
 					</select></td>
 				</tr>
 				<tr>
+<<<<<<< HEAD
 					<td><label for="education-num">Education number:</label></td>
 					<td class="input-form"><input type="number" name="education-num"/></td>
+=======
+					<td><label for="education-num">Education number</label></td>
+					<td class="input-form"><input type="number" name="education-num" max="16" min="1" required/></td>
+>>>>>>> b4196b301d1323710930827596c3d4461173f7f5
 				</tr>
 				<tr>
 					<td><label for="marital-status">Marital Status:</label></td>
@@ -133,8 +157,13 @@
 				</tr>
 				<tr>
 					<td><label for="occupation">Occupation:</label></td>
+<<<<<<< HEAD
 					<td class="input-form"><select name="occupation" class="test">
 						<option value="" ="Tech-support">Technical Support</option>
+=======
+					<td class="input-form"><select name="occupation">
+						<option value="Tech-support">Technical Support</option>
+>>>>>>> b4196b301d1323710930827596c3d4461173f7f5
 						<option value="Craft-repair">Craft Repair</option>
 						<option value="Other-service">Other Service</option>
 						<option value="Sales">Sales</option>
@@ -147,7 +176,7 @@
 						<option value="Transport-moving">Transport Moving</option>
 						<option value="Priv-house-serv">Private House Server</option>
 						<option value="Protective-serv">Protective Server</option>
-						<option value="Armed-force">Armed Force</option>
+						<option value="Armed-Forces">Armed Forces</option>
 						<option value="None">None</option>
 					</select></td>
 				</tr>
@@ -181,15 +210,15 @@
 				</tr>
 				<tr>
 					<td><label for="capital-gain">Capital Gain:</label></td>
-					<td class="input-form"><input type="number" name="capital-gain"/></td>
+					<td class="input-form"><input type="number" name="capital-gain" min="0" required/></td>
 				</tr>
 				<tr>
 					<td><label for="capital-loss">Capital Loss:</label></td>
-					<td class="input-form"><input type="number" name="capital-loss"/></td>
+					<td class="input-form"><input type="number" name="capital-loss" min="0" required/></td>
 				</tr>
 				<tr>
 					<td><label for="hours-per-week">Hours Per Week:</label></td>
-					<td class="input-form"><input type="number" name="hours-per-week"/></td>
+					<td class="input-form"><input type="number" name="hours-per-week" min="0" max="100" required/></td>
 				</tr>
 				<tr>
 					<td><label for="native-country">Native Country:</label></td>
