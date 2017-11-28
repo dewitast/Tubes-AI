@@ -54,7 +54,7 @@
 			<table>
 				<tr>
 					<td><label for="age">Age:</label></td>
-					<td class="input-form"><input type="number" name="age" required/></td>
+					<td class="input-form"><input type="number" name="age" max="100" min="15" required/></td>
 				</tr>
 				<tr>
 					<td><label for="workclass">Workclass:</label></td>
@@ -72,7 +72,7 @@
 				</tr>
 				<tr>
 					<td><label for="fnlwgt">Final Weight:</label></td>
-					<td class="input-form"><input type="number" name="fnlwgt"/></td>
+					<td class="input-form"><input type="number" name="fnlwgt" required/></td>
 				</tr>
 				<tr>
 					<td><label for="education">Last Education:</label></td>
@@ -81,8 +81,8 @@
 						<option value="Some-college">Some-college</option>
 						<option value="HS-grad">High School Graduate</option>
 						<option value="Prof-school">Professor School</option>
-						<option value="Assoc-acdm">Associate ACDM</option>
-						<option value="Assoc-voc">Associate Voc</option>
+						<option value="Assoc-acdm">Associate Academy</option>
+						<option value="Assoc-voc">Associate Vocation</option>
 						<option value="Masters">Masters</option>
 						<option value="Doctorate">Doctorate</option>
 						<option value="12th">12th</option>
@@ -97,7 +97,7 @@
 				</tr>
 				<tr>
 					<td><label for="education-num">Education number</label></td>
-					<td class="input-form"><input type="number" name="education-num"/></td>
+					<td class="input-form"><input type="number" name="education-num" max="16" min="1" required/></td>
 				</tr>
 				<tr>
 					<td><label for="marital-status">Marital Status:</label></td>
@@ -127,7 +127,7 @@
 						<option value="Transport-moving">Transport Moving</option>
 						<option value="Priv-house-serv">Private House Server</option>
 						<option value="Protective-serv">Protective Server</option>
-						<option value="Armed-force">Armed Force</option>
+						<option value="Armed-Forces">Armed Forces</option>
 						<option value="None">None</option>
 					</select></td>
 				</tr>
@@ -161,15 +161,15 @@
 				</tr>
 				<tr>
 					<td><label for="capital-gain">Capital Gain:</label></td>
-					<td class="input-form"><input type="number" name="capital-gain"/></td>
+					<td class="input-form"><input type="number" name="capital-gain" min="0" required/></td>
 				</tr>
 				<tr>
 					<td><label for="capital-loss">Capital Loss:</label></td>
-					<td class="input-form"><input type="number" name="capital-loss"/></td>
+					<td class="input-form"><input type="number" name="capital-loss" min="0" required/></td>
 				</tr>
 				<tr>
 					<td><label for="hours-per-week">Hours Per Week:</label></td>
-					<td class="input-form"><input type="number" name="hours-per-week"/></td>
+					<td class="input-form"><input type="number" name="hours-per-week" min="0" max="100" required/></td>
 				</tr>
 				<tr>
 					<td><label for="native-country">Native Country:</label></td>
