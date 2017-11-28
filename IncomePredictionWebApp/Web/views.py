@@ -12,7 +12,7 @@ def index(req):
 def process(req):
 	wcs = ['Federal-gov', 'Local-gov', 'Never-worked', 'Not-worked', 'Private', 'Self-emp-inc', 'Self-emp-not-inc', 'State-gov', 'Without-pay']
 	edus = ['10th', '11th', '12th', '1th-4th', '5th-6th', '7th-8th', '9th', 'Assoc-acdm', 'Assoc-voc', 'Bachelors', 'Doctorate', 'HS-grad', 'Masters', 'Preschool', 'Prof-school', 'Some-college']
-	mss = ['Divorced', 'Married-AF-spouse', 'Married-civ-spouse', 'Married-spouse-absent', 'Never-married', 'Separated', 'Widowed']
+	mss = ['Divorced', 'Married-af-spouse', 'Married-civ-spouse', 'Married-spouse-absent', 'Never-married', 'Separated', 'Widowed']
 	ocs = ['Adm-clerical', 'Armed-Forces', 'Craft-repair',
 		'Exec-managerial', 'Farming-fishing', 'Handlers-cleaners', 'Machine-op-inspct', 'None', 'Other-service', 'Priv-house-serv', 'Prof-specialty', 'Protective-serv', 'Sales',
 		'Tech-support', 'Transport-moving']
@@ -49,7 +49,7 @@ def process(req):
 	inp[64 + sex] = 1
 	inp[66 + native] = 1
 	model = joblib.load('model.pkl')
-	pred = model.predict(inp)
+	pred = model.predict([inp])
 	if (pred[0] == 0):
 		return HttpResponse('<=50K')
 	else :
