@@ -15,11 +15,9 @@
 			height: 100%;
 			display: table-cell;
 			vertical-align: middle;
-			background-color: #F0FDD6;
 		}
 		body {
 			vertical-align: middle;
-			background-color: #F0FDD6;	
 		}
 		.container {
 	    	justify-content: center;
@@ -30,16 +28,16 @@
 			width: 200px;
 		}
 		.test {
-			width: 204px;
+			width: 275px;
 			height: 37px;
 		}
 		tr {
-			height: 30px;
+			height: 40px;
 		}
 		td {
 			width: 150px;
 			text-align: right;
-			padding-right: 16px;
+			padding-right: 25px;
 			width: 200px;
 		}
 		select {
@@ -47,16 +45,17 @@
 		  border-radius: 10px;
 		  background: transparent;
 		  width: inherit;
-		  max-width: 250px;
+		  max-width: 275px;
 		  width: 100%;
+		  height: 30px;
 		  border: 1px solid #ccc;
 		}
 		option {
 			width: 200px;
 		}
 		input {
-			height: 30px;
-			width: 200px;
+			height: 36px;
+			width: 275px;
 			border-style: solid;
 			border-color: gray;
 			border-radius: 10px;
@@ -64,11 +63,11 @@
 			background-color: white;
 		}
 		.input-form {
-			width: 200px;
+			width: 275px;
 		}
 		select {
 		  background: #E5E5E5;
-		  width: 150px;
+		  width: 200px;
 		  padding: 5px 35px 5px 5px;
 		  border: 1px solid #ccc;
 		}
@@ -76,11 +75,11 @@
 			height: 70px;
 		}
 		.submit-button {
-			width: 350px;
+			width: 500px;
+			text-align: center;
 		}
 		.submit-button:hover {
 			background-color: #E5E5E5;
-			font-size: 30px;
 		}
 	</style>
 </head>
@@ -161,7 +160,7 @@
 				</tr>
 				<tr>
 					<td><label for="occupation">Occupation:</label></td>
-					<td class="input-form"><select name="occupation">
+					<td class="input-form"><select name="occupation" class="test">
 						<option value="Tech-support">Technical Support</option>
 						<option value="Craft-repair">Craft Repair</option>
 						<option value="Other-service">Other Service</option>
