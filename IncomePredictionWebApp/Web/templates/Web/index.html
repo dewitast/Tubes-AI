@@ -2,14 +2,16 @@
 <html>
 <head>
 	<title>Income Predictions (Urange AI)</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
 		body {
 			background-color: #F0FDD6;
 		}
 		.container {
-		display: flex;
-    justify-content: center;
-    align-content: center;
+	    	justify-content: center;
+	    	align-content: center;
+	    	width: 100%;
 		}
 		tr {
 			height: 30px;
@@ -21,7 +23,7 @@
 		select {
 		  border: 1px solid #111;
 		  background: transparent;
-		  width: 200px;
+		  width: 100%;
 		  border: 1px solid #ccc;
 		}
 		option {
@@ -40,13 +42,20 @@
 		  padding: 5px 35px 5px 5px;
 		  border: 1px solid #ccc;
 		}
+		strong {
+			font-size: 30px;
+		}
 	</style>
 </head>
 <body>
 <div class="container">
-	<div>
-		<h1>Income Predictions</h1>
-	</div>
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <h1 class="navbar-brand"><strong>Urange AI Income Predictor</strong></h1>
+	    </div>
+	  </div>
+	</nav>
 	<br />
 	<div class="data-form">
 		<form method="POST" action="process">
