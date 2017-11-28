@@ -3,8 +3,24 @@
 <head>
 	<title>Income Predictions (Urange AI)</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
+		.data-form {
+			height: 100%;
+			display: table;
+			margin: auto;
+		}
+		.real-form {
+			height: 100%;
+			display: table-cell;
+			vertical-align: middle;
+			background-color: #F0FDD6;
+		}
+		body {
+			vertical-align: middle;
+			background-color: #F0FDD6;	
+		}
 		.container {
 	    	justify-content: center;
 	    	align-content: center;
@@ -24,21 +40,19 @@
 			width: 150px;
 			text-align: right;
 			padding-right: 16px;
+			width: 200px;
 		}
 		select {
 		  border: 1px solid #111;
 		  border-radius: 10px;
 		  background: transparent;
-<<<<<<< HEAD
 		  width: inherit;
 		  max-width: 250px;
-=======
 		  width: 100%;
 		  border: 1px solid #ccc;
 		}
 		option {
 			width: 200px;
->>>>>>> b4196b301d1323710930827596c3d4461173f7f5
 		}
 		input {
 			height: 30px;
@@ -53,13 +67,11 @@
 			width: 200px;
 		}
 		select {
-		  border: 1px solid #111;
 		  background: #E5E5E5;
 		  width: 150px;
 		  padding: 5px 35px 5px 5px;
 		  border: 1px solid #ccc;
 		}
-<<<<<<< HEAD
 		tr.submit {
 			height: 70px;
 		}
@@ -68,10 +80,7 @@
 		}
 		.submit-button:hover {
 			background-color: #E5E5E5;
-=======
-		strong {
 			font-size: 30px;
->>>>>>> b4196b301d1323710930827596c3d4461173f7f5
 		}
 	</style>
 </head>
@@ -86,7 +95,7 @@
 	</nav>
 	<br />
 	<div class="data-form">
-		<form method="POST" action="process">
+		<form method="POST" action="process" class="real-form">
 			{% csrf_token %}
 			<table>
 				<tr>
